@@ -1,9 +1,8 @@
 import {Component} from 'react'
-
 import './index.css'
-
 class ClickCounter extends Component {
   state = {count: 0}
+
   onIncrement = () => {
     this.setState(prevState => ({count: prevState.count + 1}))
   }
@@ -12,16 +11,15 @@ class ClickCounter extends Component {
     const {count} = this.state
     return (
       <div className="container">
-        <h1 className="heading">
-          The Button has been clicked
-          <span className="coding"> {count} </span> times
-        </h1>
-        <p className="paragraph">Click the button to increase the count!!!</p>
-        <div>
+        <div className="text">
           <button className="button" type="button" onClick={this.onIncrement}>
-            Click Me!!
+            SUBSCRIBE
           </button>
         </div>
+        <h1 className="heading">
+          Subscribers:
+          <span className="coding"> {count} </span>
+        </h1>
       </div>
     )
   }
